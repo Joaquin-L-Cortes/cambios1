@@ -88,7 +88,7 @@ const metodosInvestigacion = [
 
 // Datos de las sociologías temáticas
 const sociologiasTematicas = [
-    { nombre: "Cultura y Sociedad en América Latina", creditos: 3},
+    { nombre: "Cultura y Sociedad en América Latina", creditos: 3, prerreq: [] },
     { nombre: "Riesgo, Experticia y Confianza", creditos: 3, prerreq: [] },
     { nombre: "Análisis Histórico y Sociológico del Municipio Colombiano", creditos: 3, prerreq: [] },
     { nombre: "Dominación Sexual y Racial", creditos: 3, prerreq: [] },
