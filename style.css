@@ -186,7 +186,7 @@ h1 {
     background: #7a9a7a;
 }
 
-/* Estilos para los modales */
+/* Estilos para el modal de métodos de investigación */
 .modal {
     display: none;
     position: fixed;
@@ -205,7 +205,7 @@ h1 {
     border: 1px solid #646464;
     border-radius: 8px;
     width: 90%;
-    max-width: 700px;
+    max-width: 600px;
     max-height: 80vh;
     display: flex;
     flex-direction: column;
@@ -253,20 +253,24 @@ h1 {
     color: #e0e0e0;
 }
 
-#listaMetodos, #listaTematicas {
+#listaMetodos, #listaTematicas1, #listaTematicas2, #listaTematicas3 {
     max-height: 400px;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .metodo-item, .tematica-item {
     background: #646464;
-    margin: 8px 0;
     padding: 12px;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
     border-left: 4px solid #7a7a7a;
     color: #e0e0e0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .metodo-item:hover, .tematica-item:hover {
@@ -287,16 +291,6 @@ h1 {
     transform: none;
     box-shadow: none;
     background: #6b4a4a;
-}
-
-.metodo-item.seleccionado, .tematica-item.seleccionado {
-    background: #4a5a6b;
-    border-left-color: #5a7a8a;
-    color: #ffffff;
-}
-
-.metodo-item.seleccionado:hover, .tematica-item.seleccionado:hover {
-    background: #5a6a7b;
 }
 
 .metodo-nombre, .tematica-nombre {
@@ -352,118 +346,8 @@ h1 {
     background: #9a7a7a;
 }
 
-/* Estilos para impresión */
-@media print {
-    body {
-        background-color: white;
-        color: black;
-        font-size: 12px;
-    }
-    
-    .container {
-        max-width: none;
-        margin: 0;
-    }
-    
-    .buttons-container {
-        display: none;
-    }
-    
-    #malla {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
-        padding: 10px 0;
-    }
-    
-    .semestre {
-        background: white;
-        border: 1px solid #333;
-        padding: 10px;
-        box-shadow: none;
-        break-inside: avoid;
-    }
-    
-    .semestre h2 {
-        color: black;
-        border-bottom: 1px solid #333;
-        font-size: 1em;
-        margin-bottom: 10px;
-    }
-    
-    .ramo {
-        background: #f5f5f5;
-        color: black;
-        padding: 8px;
-        margin: 5px 0;
-        font-size: 0.8em;
-        border-left: 3px solid #bbb;
-    }
-    
-    .ramo.aprobado {
-        background: #e8f5e8;
-        border-left-color: #4a8a4a;
-    }
-    
-    .ramo.bloqueado {
-        background: #f5e8e8;
-        border-left-color: #8a4a4a;
-    }
-    
-    .creditos {
-        color: #666;
-    }
-    
-    .leyenda {
-        margin-bottom: 15px;
-    }
-    
-    .leyenda-item {
-        color: black;
-    }
-    
-    .stats {
-        background: #f5f5f5;
-        color: black;
-        border: 1px solid #333;
-        margin-bottom: 15px;
-    }
-    
-    h1 {
-        color: black;
-        margin-bottom: 15px;
-    }
-    
-    .modal {
-        display: none !important;
-    }
-}
-
-/* Responsive para pantallas pequeñas */
+/* Responsive para el modal */
 @media (max-width: 768px) {
-    #malla {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-    
-    .semestre {
-        padding: 12px;
-    }
-    
-    .ramo {
-        padding: 10px;
-        font-size: 0.8em;
-    }
-    
-    .buttons-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .reset-btn, .print-btn {
-        width: 200px;
-    }
-    
-    /* Responsive para el modal */
     .modal-content {
         width: 95%;
         max-height: 85vh;
@@ -482,26 +366,12 @@ h1 {
         padding: 15px;
     }
     
-    #listaMetodos, #listaTematicas {
+    #listaMetodos, #listaTematicas1, #listaTematicas2, #listaTematicas3 {
         max-height: 300px;
     }
 }
 
 @media (max-width: 480px) {
-    #malla {
-        grid-template-columns: 1fr;
-    }
-    
-    .leyenda {
-        gap: 15px;
-    }
-    
-    .stats span {
-        margin: 0 10px;
-        font-size: 0.9em;
-    }
-    
-    /* Responsive para el modal en pantallas muy pequeñas */
     .modal-content {
         width: 98%;
         max-height: 90vh;
@@ -520,7 +390,7 @@ h1 {
         padding: 12px;
     }
     
-    #listaMetodos, #listaTematicas {
+    #listaMetodos, #listaTematicas1, #listaTematicas2, #listaTematicas3 {
         max-height: 250px;
     }
     
