@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Curricular Sociología UNAL - Joaquín L. Cortés</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tenorite:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Malla Curricular Sociología UNAL - Joaquín L. Cortés</h1>
+        
+        <div class="leyenda">
+            <div class="leyenda-item">
+                <div class="leyenda-color disponible"></div>
+                <span>Disponible</span>
+            </div>
+            <div class="leyenda-item">
+                <div class="leyenda-color aprobado-leyenda"></div>
+                <span>Aprobado</span>
+            </div>
+            <div class="leyenda-item">
+                <div class="leyenda-color bloqueado-leyenda"></div>
+                <span>Bloqueado</span>
+            </div>
+        </div>
+        
+        <div class="stats" id="stats"></div>
+        
+        <div class="buttons-container">
+            <button class="print-btn" onclick="imprimirMalla()">Imprimir Malla</button>
+            <button class="reset-btn" onclick="resetearMalla()">Restaurar Malla</button>
+        </div>
+        
+        <div id="malla"></div>
+    </div>
+
+    <!-- Modal para seleccionar método de investigación -->
+    <div id="modalMetodos" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Método de Investigación</h2>
+                <span class="close" onclick="cerrarModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Selecciona el método de investigación que deseas cursar:</p>
+                <div id="listaMetodos"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn cancel" onclick="cerrarModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para seleccionar sociología temática -->
+    <div id="modalTematicas" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Sociología Temática</h2>
+                <span class="close" onclick="cerrarModalTematicas()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Selecciona la sociología temática que deseas cursar:</p>
+                <div id="listaTematicas"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn cancel" onclick="cerrarModalTematicas()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
